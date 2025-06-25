@@ -25,9 +25,10 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-# ขั้นตอนการติดตั้งและรัน:
+# ขั้นตอนการติดตั้งและรัน
 ## 1. Clone โปรเจกต์
 git clone https://github.com/poowamet/storage-app.git
+
 cd storage-app
 
 ## 2. ติดตั้งแพ็กเกจด้วย Composer
@@ -36,13 +37,14 @@ composer install
 ## 3. คัดลอกไฟล์ .env และตั้งค่าการเชื่อมต่อฐานข้อมูล
 cp .env.example .env
 
-จากนั้นเปิดไฟล์ .env และแก้ไขค่าต่อไปนี้ให้ตรงกับการตั้งค่าฐานข้อมูลของคุณ:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=ชื่อฐานข้อมูล
-DB_USERNAME=ชื่อผู้ใช้ฐานข้อมูล
-DB_PASSWORD=รหัสผ่านของฐานข้อมูล
+จากนั้นเปิดไฟล์ .env และแก้ไขค่าต่อไปนี้ให้ตรงกับการตั้งค่าฐานข้อมูลของคุณ
+
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=ชื่อฐานข้อมูล
+- DB_USERNAME=ชื่อผู้ใช้ฐานข้อมูล
+- DB_PASSWORD=รหัสผ่านของฐานข้อมูล
 
 ## 4. สร้าง application key
 php artisan key:generate
