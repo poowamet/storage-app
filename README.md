@@ -21,41 +21,38 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+ขั้นตอนการติดตั้งและรัน:
+
+# 1. Clone โปรเจกต์
+git clone https://github.com/poowamet/storage-app.git
+cd storage-app
+
+# 2. ติดตั้งแพ็กเกจด้วย Composer
+composer install
+
+# 3. คัดลอกไฟล์ .env และตั้งค่าการเชื่อมต่อฐานข้อมูล
+cp .env.example .env
+
+จากนั้นเปิดไฟล์ .env และแก้ไขค่าต่อไปนี้ให้ตรงกับการตั้งค่าฐานข้อมูลของคุณ:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ชื่อฐานข้อมูล
+DB_USERNAME=ชื่อผู้ใช้ฐานข้อมูล
+DB_PASSWORD=รหัสผ่านของฐานข้อมูล
+
+# 4. สร้าง application key
+php artisan key:generate
+
+# 5. รันคำสั่ง Migrate เพื่อสร้างตารางในฐานข้อมูล
+php artisan migrate
+
+# 6. เริ่มต้นเซิร์ฟเวอร์ Laravel
+php artisan serve
+
+จากนั้นสามารถเปิดเบราว์เซอร์และเข้าใช้งานได้ที่:
+http://localhost:8000

@@ -20,7 +20,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>รหัส</th>
+                    <th>ลำดับ</th>
                     <th>ชื่อสินค้า</th>
                     <th>รายละเอียด</th>
                     <th>ราคา</th>
@@ -30,9 +30,9 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($products as $product)
+                @foreach($products as $num => $product)
                 <tr>
-                    <td>{{ $product->id }}</td>
+                    <td>{{ $num + 1 }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ Str::limit($product->description, 50) ?? 'ไม่มีรายละเอียด' }}</td>
                     <td>฿{{ number_format($product->price, 2) }}</td>
